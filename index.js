@@ -5,7 +5,9 @@ const cors = require("cors");
 const app = express();
 
 const isDev = app.settings.env === "development";
-const URL =isDev?'http://localhost:3000' : 'https://nextjs-sketch-book-1b59114o4-gyandeeparyan.vercel.app/'
+const URL = isDev
+  ? "http://localhost:3000"
+  : "https://nextjs-sketch-book-h8iug3yba-gyandeeparyan.vercel.app/";
 
 app.use(cors({ origin: URL }));
 app.use(express.json({ extended: true }));
